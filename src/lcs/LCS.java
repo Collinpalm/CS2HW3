@@ -24,14 +24,14 @@ public class LCS {
         int n = y.length();
         c = new int[m][n];
         b = new char[m][n];
-        for(int i = 0; i <= m; i++){
+        for(int i = 0; i < m; i++){
             c[i][0] = 0;
         }
-        for(int i = 0; i <= n; i++){
+        for(int i = 0; i < n; i++){
             c[0][i] = 0;
         }
-        for(int i = 1;i <= m;i++){
-            for (int j = 1; j<= n; j++){
+        for(int i = 1;i < m;i++){
+            for (int j = 1; j< n; j++){
                 if(x.charAt(i) == y.charAt(j)){
                     c[i][j] = c[i][j] +1;
                     b[i][j] = 'D';
