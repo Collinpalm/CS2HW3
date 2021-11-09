@@ -19,7 +19,7 @@ public class LCSRunner {
         System.out.println("Starting with a simple test case...");
         
         LCS test1 = new LCS("abcbdab", "bdcaba"); //create first scenario
-        
+
         test1.lcsDynamicSol(); //calling dynamic programming solution
         
         if(test1.getLCS().compareTo("bcba") == 0) //checking to see if solution is correct
@@ -27,6 +27,7 @@ public class LCSRunner {
             System.out.println("Test Case 1 Passed!");
             pass = pass + 1;
         }
+        System.out.println(test1.getLCS());
         
         System.out.println("****************************************");
         
@@ -41,7 +42,7 @@ public class LCSRunner {
             System.out.println("Test Case 2 Passed!");
             pass = pass + 1;
         }
-        
+        System.out.println(test2.getLCS());
         System.out.println("****************************************");
         
         System.out.println("****************************************");
@@ -57,7 +58,7 @@ public class LCSRunner {
             System.out.println("Test Case 3 Passed!");
             pass = pass + 1;
         }
-        
+        System.out.println(test3.getLCS());
         System.out.println("****************************************");
         
         System.out.println("Now time for the big test case...");
