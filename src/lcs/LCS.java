@@ -35,6 +35,7 @@ public class LCS {
         for(int j = 0; j < n; j++){
             c[0][j] = 0;
         }
+        //main nested loop to generate grids(2d arrays)
         for(int i = 1;i <= m;i++){
             for (int j = 1; j <= n; j++){
                 if(x.charAt(i-1) == y.charAt(j-1)){
@@ -50,20 +51,20 @@ public class LCS {
             }
         }
     }
-
+    //called by runner, it sets up the printlcs method
     public static String getLCS(){
         StringBuilder sb = new StringBuilder();
         printLcs(one.length(), two.length(), sb);
         return sb.toString();
     }
-
+    //doesnt actally print, just modifies the stringbuilder object, because... pass by reference for objects
     public static void printLcs(int i, int j, StringBuilder str){
         if(i == 0 || j == 0){
             return;
         }
         if(b[i][j] == 'D'){
             printLcs(i-1, j-1, str);
-            str.append(one.charAt(i-1));
+            str.append(one.charAt(i-1));//I used stringbuilder instead of print so it could be returnable
         }else if(b[i][j] == 'U'){
             printLcs(i-1, j, str);
         }else{
