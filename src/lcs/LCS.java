@@ -31,7 +31,7 @@ public class LCS {
             c[0][i] = 0;
         }
         for(int i = 1;i < m;i++){
-            for (int j = 1; j< n; j++){
+            for (int j = 1; j < n; j++){
                 if(x.charAt(i) == y.charAt(j)){
                     c[i][j] = c[i][j] +1;
                     b[i][j] = 'D';
@@ -48,7 +48,7 @@ public class LCS {
 
     public static String getLCS(){
         StringBuilder sb = new StringBuilder();
-        printLcs(one.length(), two.length(), sb);
+        printLcs(one.length()-1, two.length()-1, sb);
         return sb.toString();
     }
 
